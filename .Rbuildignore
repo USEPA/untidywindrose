@@ -1,7 +1,7 @@
-^.*\.Rproj$
 ^.*\.RData
 ^.*\.Rhistory
 ^\.Rproj\.user$
 ^packrat/
 ^\.Rprofile$
 
+^.*\.Rproj$
