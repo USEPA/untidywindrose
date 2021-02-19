@@ -6,5 +6,5 @@
 #' @return shiny application object
 #' @export
 utwr <- function() {
-  shiny::runApp("./R/App.R")
+  shiny::runApp("./R/app.R")
 }
