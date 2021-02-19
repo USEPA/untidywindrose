@@ -19,29 +19,20 @@ install any software or having to learn a new programming language.
 
 ## Getting Started
 
-# Untidy windrose requires the following R packages to be installed before
-
-deployment  
-&gt; install.packages(c(“DT”, “openair”, “dplyr”, “shiny”, “shinyjs”),
-dependencies=T)
-
-<!-- ##  (optional) Load libraries into R   -->
-<!-- library(DT)   -->
-<!-- library(openair)   -->
-<!-- library(dplyr)   -->
-<!-- library(shiny)   -->
-<!-- library(shinyjs)   -->
-
 ## Installation
 
-### clone repository
+### Installing the development version of Untidywindrose
 
-> git clone <https://bitbucket.epa.gov/scm/aqda/untidywindrose.git>
+If you do not have the remotes package installed, install it now
 
-### Build the library with devtools
+> install.packages(“remotes”, dependencies = TRUE)
 
-> devtools::build(binary = FALSE, manual = TRUE, vignettes = TRUE)  
-> devtools::build\_readme()
+next install the development version of untidywindrose.
+
+remotes::install\_github(repo = “USEEPA/untidywindrose”, dependencies =
+TRUE, upgrade = “always”, build = TRUE \#optional, if you want the
+manual build\_manual = TRUE, \#optional, if you want the vignette
+build\_vignettes = TRUE )
 
 ## attach the package
 
@@ -81,11 +72,5 @@ endorsement, recommendation or favoring by EPA. The EPA seal and logo
 shall not be used in any manner to imply endorsement of any commercial
 product or activity by EPA or the United States Government.
 
-By submitting a pull request, you make an agreement with EPA that you
-will not submit a claim of compensation for services rendered to EPA or
-any other federal agency. Further, you agree not to charge the time you
-spend developing software code related to this project to any federal
-grant or cooperative agreement.
-
-\#\#License This project is licensed under the MIT License - see the
+\#\#License This project is licensed under the CC0 License - see the
 [LICENSE.md](LICENSE.md) file for details
