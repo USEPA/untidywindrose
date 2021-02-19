@@ -1,0 +1,22 @@
+Package: untidywindrose
+Version: 2018.03.23
+Date: 2018-03-23
+Title: Create Windroses using an easy to use RShiny interface
+Authors@R: c(person("Clinton", "Mccrowey", role = c("aut", "cre"),
+                     email = "mccrowey.clinton@epa.gov"))
+Author: Clinton Mccrowey <mccrowey.clinton@epa.gov> [aut, cre],
+Maintainer: Clinton Mccrowey <mccrowey.clinton@epa.gov>
+Depends: R (>= 3.4.2)
+Imports: DT, openair, dplyr, shiny, shinyjs
+Suggests: knitr, rmarkdown
+Encoding: UTF-8
+Description: A simple Rshiny app for the creation of windroses from tesxt based tabular data
+License: CC0
+License_is_FOSS: yes
+License_restricts_use: no
+LazyData: true
+URL: https://github.com/USEPA/untidywinrose
+BugReports: https://github.com/USEPA/untidywinrose/issues
+RoxygenNote: 6.0.1
+VignetteBuilder: rmarkdown
+ByteCompile: true

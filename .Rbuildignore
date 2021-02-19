@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^.*\.RData
+^.*\.Rhistory
+^\.Rproj\.user$
+^packrat/
+^\.Rprofile$
+^exclude/
+^LICENSE\.md$
