@@ -45,7 +45,7 @@ If you do not have the remotes package installed, install it now
 next install the development version of untidywindrose.
 
 ``` r
-remotes::install_github(repo = "USEEPA/untidywindrose",
+remotes::install_github(repo = "USEPA/untidywindrose",
                         dependencies = TRUE,
                         upgrade = "always",
                         build = TRUE,
