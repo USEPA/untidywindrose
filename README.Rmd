@@ -31,6 +31,7 @@ If you do not have the remotes package installed, install it now
 
 next install the development version of untidywindrose.
 
+```R
 remotes::install_github(repo = "USEEPA/untidywindrose",
                         dependencies = TRUE,
                         upgrade = "always",
@@ -40,6 +41,7 @@ remotes::install_github(repo = "USEEPA/untidywindrose",
                         #optional, if you want the vignette
                         build_vignettes = TRUE
                         )
+```
 
 ## attach the package 
 library(untidywindrose)

@@ -29,10 +29,17 @@ If you do not have the remotes package installed, install it now
 
 next install the development version of untidywindrose.
 
-remotes::install\_github(repo = “USEEPA/untidywindrose”, dependencies =
-TRUE, upgrade = “always”, build = TRUE \#optional, if you want the
-manual build\_manual = TRUE, \#optional, if you want the vignette
-build\_vignettes = TRUE )
+``` r
+remotes::install_github(repo = "USEEPA/untidywindrose",
+                        dependencies = TRUE,
+                        upgrade = "always",
+                        build = TRUE
+                        #optional, if you want the manual
+                        build_manual = TRUE,
+                        #optional, if you want the vignette
+                        build_vignettes = TRUE
+                        )
+```
 
 ## attach the package
 
