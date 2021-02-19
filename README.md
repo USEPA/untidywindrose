@@ -60,7 +60,7 @@ remotes::install_github(repo = "USEEPA/untidywindrose",
 
 > library(untidywindrose)
 
-> untidywindrose::untidywindrose()
+> untidywindrose::utwr()
 
 ## Usage
 

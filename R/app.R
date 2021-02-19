@@ -1,8 +1,3 @@
-library(shiny)
-library(shinyjs)
-library(DT)
-library(openair)
-library(dplyr)
 wbcolnames <- NA
 wr <- NA
 outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
@@ -10,61 +5,91 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 
 #' @title ui for untidywindrose.
 #' @description The Rshiny's UI object for untidywindrose
+#' @importFrom DT dataTableOutput
+#' @importFrom shiny mainPanel titlePanel tags fileInput numericInput
+#' @importFrom shiny selectInput radioButtons actionButton downloadButton
+#' @importFrom shiny plotOutput sidebarPanel fluidPage
+#' @importFrom shinyjs useShinyjs hidden
+#' @importFrom openair windRose
 #' @return NA
-#' @noRd
-               ui <- fluidPage(
-                titlePanel(title = "untidywindrose", windowTitle = "untidywindrose"),
+   ui <- shiny::fluidPage(shiny::titlePanel(title = "untidywindrose",
+                                            windowTitle = "untidywindrose"),
                 
-                mainPanel(
-                  useShinyjs(),
-                  tags$p(),
-                  "For questions, comments or bug reports", tags$a(href = "mailto:mccrowey.clinton@epa.gov?subject=Rshiny untidywindrose app",
-                                                                          "E-mail the author"),
-                  tags$p(),
+                shiny::mainPanel(
+                  shinyjs::useShinyjs(),
+                  shiny::tags$p(),
+                  "For questions, comments or bug reports",
+                  shiny::tags$a(href = "mailto:mccrowey.clinton@epa.gov?subject=Rshiny untidywindrose app",
+                         "E-mail the author"),
+                  shiny::tags$p(),
                 
-                  fileInput(inputId = "inputfile", label = "Select a file"),
-                  numericInput(inputId = "headerrows", label = "Ignore first N rows", value = 0, min = 0),
-                  selectInput(inputId = "header", label = "Does this file contain a header?",
-                              choices = list(F,T)),
-                  selectInput(inputId = "transpose", label = "Transpose the data?",
-                              choices = list(F,T)),
-                  radioButtons(inputId = "delim",
-                              label = "File delimiter",
-                              choices = list("tab (\"/t\")", "comma (\",\")", "semicolon (\";\")", "bar (\"|\")", "space (\" \")", "other delimter"), 
+                  shiny::fileInput(inputId = "inputfile",
+                            label = "Select a file"),
+                  shiny::numericInput(inputId = "headerrows",
+                               label = "Ignore first N rows",
+                               value = 0,
+                               min = 0),
+                  shiny::selectInput(inputId = "header",
+                              label = "Does this file contain a header?",
+                              choices = list(F,T)
+                              ),
+                  shiny::selectInput(inputId = "transpose",
+                              label = "Transpose the data?",
+                              choices = list(F,T)
+                              ),
+                  shiny::radioButtons(inputId = "delim",
+                               label = "File delimiter",
+                               choices = list("tab (\"/t\")",
+                                              "comma (\",\")",
+                                              "semicolon (\";\")",
+                                              "bar (\"|\")",
+                                              "space (\" \")",
+                                              "other delimter"
+                                              ), 
                               selected = NULL
                               ),
-                  shinyjs::hidden(textInput(inputId = "delimother", label = "delimiter")),
-                  actionButton(inputId = "submit", label = "Submit"),
-                  shinyjs::hidden(selectInput(inputId = "windspeed", label = "which column represents windspeed?",
-                              choices = wbcolnames)),
-                  shinyjs::hidden(selectInput(inputId = "winddirection",
-                              label = "which column represents wind direction?", choices = wbcolnames)),
-                  shinyjs::hidden(selectInput(inputId = "outputext",
-                              label = "plot output extension?", choices = outputextnsions)),
-                  shinyjs::hidden(actionButton(inputId = "submit2", label = "Display Plot")),
-                  shinyjs::hidden(downloadButton(outputId = "outfile", label = "Download Plot")),
+                  shinyjs::hidden(shiny::textInput(inputId = "delimother",
+                                   label = "delimiter"
+                                  )
+                         ),
+                  shiny::actionButton(inputId = "submit",
+                               label = "Submit"
+                               ),
+                  shinyjs::hidden(shiny::selectInput(inputId = "windspeed",
+                                     label = "which column represents windspeed?",
+                                     choices = wbcolnames)
+                         ),
+                  shinyjs::hidden(shiny::selectInput(inputId = "winddirection",
+                              label = "which column represents wind direction?",
+                                     choices = wbcolnames)
+                        ),
+                  shinyjs::hidden(shiny::selectInput(inputId = "outputext",
+                                     label = "plot output extension?",
+                                     choices = outputextnsions)
+                                    ),
+                  shinyjs::hidden(shiny::actionButton(inputId = "submit2",
+                                      label = "Display Plot")
+                         ),
+                  shinyjs::hidden(shiny::downloadButton(outputId = "outfile",
+                                        label = "Download Plot")
+                        ),
                   width = 3
                   ),
-      
 
-                  sidebarPanel(
-                    #tags$img(src = "DataRUSLogo.png"),
-                 #dashboardSidebar(
-                              DT::dataTableOutput(outputId = "outputtable"),
-                              plotOutput(outputId = "wr"),
-                              width = 9
-                              )
-              
+
+                  shiny::sidebarPanel(DT::dataTableOutput(outputId = "outputtable"),
+                               shiny::plotOutput(outputId = "wr"),
+                               width = 9
+                               )
                   )
-              #  ),
-               # tabPanel("Help", "blah blah blah")
-#)
-               
+
+
 #' @title server for untidywindrose.
 #' @description The Rshiny's server object for untidywindrose
 #' @param input the required rshiny input object
 #' @param output the required rshiny output object
 #' @param session the optional rshiny session object
+#' @importFrom openair windRose
 #' @return NA
 #' @noRd
 
@@ -87,10 +112,18 @@ server <- function(input, output, session){
                       "other delimter" = delim <- delim <- isolate(input$delimother),
                       warning("Invalid delim selected")
                      )
-                worksheet$wb <- isolate(read.delim(infile$datapath, header = as.logical(input$header), sep = delim, skip = input$headerrows))
-                if (input$transpose == T) {worksheet$wb <- t(isolate(worksheet$wb))}
+                worksheet$wb <- isolate(read.delim(infile$datapath,
+                                                   header = as.logical(input$header),
+                                                   sep = delim, skip = input$headerrows
+                                                   )
+                                        )
+                if (input$transpose == T)
+                  {
+                    worksheet$wb <- t(isolate(worksheet$wb))
+                  }
                 wbcolnames <- colnames(worksheet$wb)
-                updateSelectInput(session = session, inputId = "windspeed",
+                updateSelectInput(session = session,
+                                  inputId = "windspeed",
                                   label = "which column represents windspeed?",
                                   choices = wbcolnames
                                   )
@@ -111,12 +144,10 @@ server <- function(input, output, session){
               })
   
               observeEvent(input$submit2, {
-                #shinyjs::hidden("outputtable")
-                output$wr <- renderPlot({
-                                          windRose(mydata = worksheet$wb,
-                                                    ws = isolate(input$windspeed),
-                                                    wd = isolate(input$winddirection),
-                                                    annotate = T)
+                output$wr <- renderPlot({windRose(mydata = worksheet$wb,
+                                                  ws = isolate(input$windspeed),
+                                                  wd = isolate(input$winddirection),
+                                                  annotate = T)
                                         })
                 output$outfile <- downloadHandler(
                   filename = function() {
@@ -128,9 +159,13 @@ server <- function(input, output, session){
                     else if (isolate(input$outputext) == "pdf") {ext <- ".pdf"}
                     else if (isolate(input$outputext) == "ps") {ext <- ".ps"}
                     
-                    return(paste0("windrose_", format(Sys.time(), format = "%m-%d-%Y_%H_%M"), ext))
-                    },
-                  
+                    return(paste0("windrose_",
+                                  format(Sys.time(),
+                                         format = "%m-%d-%Y_%H_%M"),
+                                  ext)
+                           )
+                                         },
+
                 content = function(file) {
                     if (isolate(input$outputext) == "png") { png(file)}
                     else if (isolate(input$outputext) == "bmp") {bmp(file)}
@@ -141,11 +176,12 @@ server <- function(input, output, session){
                                                                   postscript(file)
                                                                 }
                     else if (isolate(input$outputext) == "pdf") { pdf(file) }
-                    else if (isolate(input$outputext) == "ps") { postscript(file) }
+                    else if (isolate(input$outputext) == "ps") {postscript(file)}
                     plot(windRose(mydata = worksheet$wb,
                                   ws = isolate(input$windspeed),
                                   wd = isolate(input$winddirection),
-                                  annotate = T))
+                                  annotate = T)
+                         )
                     dev.off()
                     }
                 )
@@ -156,8 +192,9 @@ server <- function(input, output, session){
 
 #' @title shinyApp call for untidywindrose.
 #' @description the call to shinyApp for untidywindrose
+#' @importFrom shiny shinyApp
 #' @param ui the required rshiny input object for untidywindrose
 #' @param server the required rshiny input object for untidywindrose
 #' @return NA
 #' @noRd
-shinyApp(ui = ui, server = server)
+shiny::shinyApp(ui = ui, server = server)
