@@ -1,10 +1,25 @@
 README
 ================
 
+# EPA Disclaimer
+
+This software/application was developed by the U.S. Environmental
+Protection Agency (USEPA). No warranty expressed or implied is made
+regarding the accuracy or utility of the system, nor shall the act of
+distribution constitute any such warranty. The USEPA has relinquished
+control of the information and no longer has responsibility to protect
+the integrity, confidentiality or availability of the information. Any
+reference to specific commercial products, processes, or services by
+service mark, trademark, manufacturer, or otherwise, does not constitute
+or imply their endorsement, recommendation or favoring by the USEPA. The
+USEPA seal and logo shall not be used in any manner to imply endorsement
+of any commercial product or activity by the USEPA or the United States
+Government.
+
 # untidywindrose
 
 A windrose is a graphical representation of the distribution of
-windspeed and wind direction at a location. windroses are useful for the
+windspeed and wind direction at a location. Windroses are useful for the
 assessment of air pollution measurements and are a useful tool for air
 pollution scientists. Untidywindrose is an easy to use web application
 that can be used to create windroses from text based tabular data files
@@ -21,7 +36,7 @@ install any software or having to learn a new programming language.
 
 ## Installation
 
-### Installing the development version of Untidywindrose
+### Install the development version of Untidywindrose
 
 If you do not have the remotes package installed, install it now
 
@@ -41,9 +56,9 @@ remotes::install_github(repo = "USEEPA/untidywindrose",
                         )
 ```
 
-## attach the package
+## attach the package then run untidywindrose()
 
-library(untidywindrose)
+> library(untidywindrose) untidywindrose::untidywindrose()
 
 ## Usage
 
@@ -63,7 +78,7 @@ package for further instructions
     Environmental Protection Agency
 -   (management) Alice Chow, Associate Director - U.S. Environmental
     Protection Agency
--   (technical review) Cynthia Stahl ph.D., Environmental Scientist -
+-   (technical review) Cynthia Stahl Ph.D., Environmental Scientist -
     U.S. Environmental Protection Agency
 
 ## EPA Disclaimer

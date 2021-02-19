@@ -3,12 +3,13 @@ title: "README"
 output: github_document
     
 ---
-
+```{r child = "./vignettes/EPA_Disclaimer.Rmd", echo = FALSE, comment = NA}
+```
 
 # untidywindrose
 
 A windrose is a graphical representation of the distribution of windspeed and
-wind direction at a location. windroses are useful for the assessment of air
+wind direction at a location. Windroses are useful for the assessment of air
 pollution measurements and are a useful tool for air pollution scientists.
 Untidywindrose is an easy to use web application that can be used to create
 windroses from text based tabular data files that makes producing windroses
@@ -23,7 +24,7 @@ any software or having to learn a new programming language.
 ## Getting Started
 ## Installation  
 
-### Installing the development version of Untidywindrose
+### Install the development version of Untidywindrose
 
 If you do not have the remotes package installed, install it now
 
@@ -43,8 +44,9 @@ remotes::install_github(repo = "USEEPA/untidywindrose",
                         )
 ```
 
-## attach the package 
-library(untidywindrose)
+## attach the package then run untidywindrose()
+> library(untidywindrose)
+  untidywindrose::untidywindrose()
 
 ## Usage
 Please refer to the vignette for untidywindrose provided with this package for
@@ -60,7 +62,7 @@ further instructions
   Protection Agency
 * (management) Alice Chow, Associate Director - U.S. Environmental Protection
   Agency
-* (technical review) Cynthia Stahl ph.D., Environmental Scientist - U.S.
+* (technical review) Cynthia Stahl Ph.D., Environmental Scientist - U.S.
   Environmental Protection Agency
 
 

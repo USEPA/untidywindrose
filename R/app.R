@@ -9,14 +9,9 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 
 
 #' @title ui for untidywindrose.
-#'
-#' @description
-#' The Rshiny's UI object for untidywindrose
-#'
-#' @param NA
-#' 
+#' @description The Rshiny's UI object for untidywindrose
 #' @return NA
-
+#' @noRd
                ui <- fluidPage(
                 titlePanel(title = "untidywindrose", windowTitle = "untidywindrose"),
                 
@@ -66,15 +61,12 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 #)
                
 #' @title server for untidywindrose.
-#'
-#' @description
-#' The Rshiny's server object for untidywindrose
-#'
+#' @description The Rshiny's server object for untidywindrose
 #' @param input the required rshiny input object
 #' @param output the required rshiny output object
 #' @param session the optional rshiny session object
-#' 
 #' @return NA
+#' @noRd
 
 server <- function(input, output, session){
               worksheet <- reactiveValues()
@@ -163,13 +155,9 @@ server <- function(input, output, session){
 }
 
 #' @title shinyApp call for untidywindrose.
-#'
-#' @description
-#' the call to shinyApp for untidywindrose
-#'
+#' @description the call to shinyApp for untidywindrose
 #' @param ui the required rshiny input object for untidywindrose
 #' @param server the required rshiny input object for untidywindrose
-#' 
 #' @return NA
-
+#' @noRd
 shinyApp(ui = ui, server = server)
