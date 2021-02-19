@@ -46,7 +46,8 @@ remotes::install_github(repo = "USEEPA/untidywindrose",
 
 ## attach the package then run untidywindrose()
 > library(untidywindrose)
-  untidywindrose::untidywindrose()
+
+>  untidywindrose::utwr()
 
 ## Usage
 Please refer to the vignette for untidywindrose provided with this package for
