@@ -1,16 +1,12 @@
 #' launches the untidywindrose shiny app
 #' 
-#' @title utwr
+#' @title untidywindrose
 #' @description starts the untidywindrose shiny app
 #' @importFrom shiny runApp
-#' @importFrom magrittr `%>%`
-#' @importFrom rprojroot find_root_file has_file
+#' @importFrom rprojroot find_package_root_file
 #' @return shiny application object
 #' @export
-utwr <- function() {
-  rprojroot::find_root_file("R",
-                            "app.R",
-                            criterion = has_file("DESCRIPTION")
-                            ) %>% 
-  shiny::runApp()
+untidywindrose <- function() {
+  utwr.path <- system.file(package = "untidywindrose")
+  shiny::runApp(appDir = utwr.path)
 }

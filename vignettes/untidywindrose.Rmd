@@ -56,7 +56,7 @@ remotes::install_github(repo = "USEPA/untidywindrose",
 
 ## attach the package then run untidywindrose()
 > library(untidywindrose)
-  untidywindrose::utwr()
+  untidywindrose::untidywindrose()
 
 ## Usage
 The start-up screen will display once the applet has been loaded with a standard web browser. First, upload a file containing wind speed and wind direction data using the “Browse…” button under “select a file” on the left side of the screen. Here you will choose the delimited, plain-text file containing  the data  to be plotted into a wind rose .
