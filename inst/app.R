@@ -17,11 +17,6 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
                 
                 shiny::mainPanel(
                   shinyjs::useShinyjs(),
-                  shiny::tags$p(),
-                  "For questions, comments or bug reports",
-                  shiny::tags$a(href = "mailto:mccrowey.clinton@epa.gov?subject=Rshiny untidywindrose app",
-                         "E-mail the author"),
-                  shiny::tags$p(),
                 
                   shiny::fileInput(inputId = "inputfile",
                             label = "Select a file"),
