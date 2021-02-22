@@ -7,7 +7,7 @@ Authors@R: c(person("Clinton", "Mccrowey", role = c("aut", "cre"),
 Author: Clinton Mccrowey <mccrowey.clinton@epa.gov> [aut, cre],
 Maintainer: Clinton Mccrowey <mccrowey.clinton@epa.gov>
 Depends: R (>= 3.4.2)
-Imports: DT, openair, dplyr, shiny, shinyjs
+Imports: DT, openair, dplyr, shiny, shinyjs, rprojroot, magrittr
 Suggests: knitr, rmarkdown, roxygen2
 Encoding: UTF-8
 Description: A simple shiny app for the creation of windroses from text based tabular data
