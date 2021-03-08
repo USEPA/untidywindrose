@@ -80,7 +80,7 @@ package for further instructions
     Environmental Protection Agency
 -   (management) Alice Chow, Associate Director - U.S. Environmental
     Protection Agency
--   (technical review) Cynthia Stahl Ph.D., Environmental Scientist -
+-   (document review) Cynthia Stahl Ph.D., Environmental Scientist -
     U.S. Environmental Protection Agency
 
 ## EPA Disclaimer

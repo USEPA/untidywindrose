@@ -128,7 +128,7 @@ server <- function(input, output, session){
                                   choices = wbcolnames
                                   )
                 shinyjs::show("submit2")
-                return(worksheet$wb)
+                #return(worksheet$wb)
                 })
               })
               
@@ -139,7 +139,7 @@ server <- function(input, output, session){
               })
   
               observeEvent(input$submit2, {
-                output$wr <- renderPlot({windRose(mydata = worksheet$wb,
+                output$wr <- renderPlot({openair::windRose(mydata = worksheet$wb,
                                                   ws = isolate(input$windspeed),
                                                   wd = isolate(input$winddirection),
                                                   annotate = T)
