@@ -5,7 +5,7 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 
 #' @title ui for untidywindrose.
 #' @description The Rshiny's UI object for untidywindrose
-#' @importFrom DT dataTableOutput
+#' @importFrom DT dataTableOutput renderDataTable
 #' @importFrom shiny mainPanel titlePanel tags fileInput numericInput
 #' @importFrom shiny selectInput radioButtons actionButton downloadButton
 #' @importFrom shiny plotOutput sidebarPanel fluidPage
@@ -95,7 +95,7 @@ server <- function(input, output, session){
                 shinyjs::show("winddirection")
                 shinyjs::show("outputext")
                 delim <- input$delim
-                output$outputtable <- renderDataTable({
+                output$outputtable <- DT::renderDataTable({
                 infile <- input$inputfile
                 switch(delim,
                       "tab (\"/t\")" = delim <- "\t",
@@ -128,7 +128,7 @@ server <- function(input, output, session){
                                   choices = wbcolnames
                                   )
                 shinyjs::show("submit2")
-                #return(worksheet$wb)
+                return(worksheet$wb)
                 })
               })
               
