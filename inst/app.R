@@ -172,7 +172,7 @@ server <- function(input, output, session){
                                                                 }
                     else if (isolate(input$outputext) == "pdf") { pdf(file) }
                     else if (isolate(input$outputext) == "ps") {postscript(file)}
-                    plot(windRose(mydata = worksheet$wb,
+                    plot(openair::windRose(mydata = worksheet$wb,
                                   ws = isolate(input$windspeed),
                                   wd = isolate(input$winddirection),
                                   annotate = T)
