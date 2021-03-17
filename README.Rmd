@@ -6,6 +6,10 @@ output: github_document
 ```{r child = "./vignettes/EPA_Disclaimer.Rmd", echo = FALSE, comment = NA}
 ```
 
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/badge.svg)](https://github.com/USEPA/untidywindrose/actions)
+  <!-- badges: end -->
+
 # untidywindrose
 
 A windrose is a graphical representation of the distribution of windspeed and

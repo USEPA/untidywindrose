@@ -16,6 +16,11 @@ USEPA seal and logo shall not be used in any manner to imply endorsement
 of any commercial product or activity by the USEPA or the United States
 Government.
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/badge.svg)](https://github.com/USEPA/untidywindrose/actions)
+<!-- badges: end -->
+
 # untidywindrose
 
 A windrose is a graphical representation of the distribution of
