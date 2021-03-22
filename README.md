@@ -18,7 +18,11 @@ Government.
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/badge.svg)](https://github.com/USEPA/untidywindrose/actions)
+[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/bade.svg)](https://github.com/USEPA/untidywindrose/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/untidywindrose)](https://CRAN.R-project.org/package=untidywindrose)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 # untidywindrose

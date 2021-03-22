@@ -1,7 +1,7 @@
 Package: untidywindrose
 Version: 2021.02.18
 Language: en-US
-Title: Create Windroses using an easy to use shiny interface
+Title: Create Windroses plots with an easy to use shiny interface
 Authors@R: c(person("Clinton", "Mccrowey", role = c("aut", "cre"),
                      email = "mccrowey.clinton@epa.gov"))
 Author: Clinton Mccrowey <mccrowey.clinton@epa.gov> [aut, cre],
@@ -10,7 +10,8 @@ Depends: R (>= 3.4.2)
 Imports: DT, openair, dplyr, shiny, shinyjs
 Suggests: knitr, rmarkdown, roxygen2
 Encoding: UTF-8
-Description: A simple shiny app for the creation of windroses from text based tabular data
+Description: A simple shiny app for the creation of windroses from text based
+  tabular data.
 License: CC0
 License_is_FOSS: yes
 License_restricts_use: no
@@ -18,7 +19,7 @@ LazyData: true
 URL: https://github.com/USEPA/untidywinrose
 BugReports: https://github.com/USEPA/untidywinrose/issues
 RoxygenNote: 7.1.1
-VignetteBuilder: rmarkdown
+VignetteBuilder: knitr
 ByteCompile: true
 Collate: 'untidywindrose.R'
 Copyright: United States Environmental Protection Agency

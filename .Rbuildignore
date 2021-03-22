@@ -6,3 +6,9 @@
 
 ^.*\.Rproj$
 ^\.github$
+^cran-comments\.md$
+^README.md$
+^README.Rmd$
+^\WWW$
+^LICENSE.md$
+^.git\$

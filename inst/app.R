@@ -17,7 +17,7 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
                 
                 shiny::mainPanel(
                   shinyjs::useShinyjs(),
-                
+                  tags$img(src = "DataRUSLogo.bmp"),
                   shiny::fileInput(inputId = "inputfile",
                             label = "Select a file"),
                   shiny::numericInput(inputId = "headerrows",
