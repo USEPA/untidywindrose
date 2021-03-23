@@ -9,7 +9,7 @@ output:
 vignette: >
   %\VignetteIndexEntry{untidywindrose} 
   %\VignetteEngine{knitr::rmarkdown} 
-  \VignetteEncoding{UTF-8}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include = FALSE}

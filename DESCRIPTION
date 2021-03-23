@@ -1,10 +1,9 @@
 Package: untidywindrose
-Version: 2021.02.18
+Version: 2021.3.23
 Language: en-US
-Title: Create Windroses plots with an easy to use shiny interface
+Title: Create Windrose Plots with an Easy to Use Shiny Interface
 Authors@R: c(person("Clinton", "Mccrowey", role = c("aut", "cre"),
                      email = "mccrowey.clinton@epa.gov"))
-Author: Clinton Mccrowey <mccrowey.clinton@epa.gov> [aut, cre],
 Maintainer: Clinton Mccrowey <mccrowey.clinton@epa.gov>
 Depends: R (>= 3.4.2)
 Imports: DT, openair, dplyr, shiny, shinyjs
@@ -16,8 +15,8 @@ License: CC0
 License_is_FOSS: yes
 License_restricts_use: no
 LazyData: true
-URL: https://github.com/USEPA/untidywinrose
-BugReports: https://github.com/USEPA/untidywinrose/issues
+URL: https://github.com/USEPA/untidywindrose
+BugReports: https://github.com/USEPA/untidywindrose/issues
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 ByteCompile: true

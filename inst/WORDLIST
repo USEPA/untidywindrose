@@ -1,9 +1,11 @@
+CMD
 md #for .md
 bmp
 datatable
 eps
 jpeg
 JSON
+Lifecycle
 Ph #for Ph.D
 png
 ps
@@ -14,6 +16,8 @@ USEPA
 utwr
 WindDirection
 windrose
+Windrose
 windroses
+Windroses
 windspeed 
 Windspeed
