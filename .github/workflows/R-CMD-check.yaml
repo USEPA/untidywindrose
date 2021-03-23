@@ -7,12 +7,12 @@
 on:
   push:
     branches:
-      - main
       - master
+      - github-actions
   pull_request:
     branches:
-      - main
       - master
+      - github-actions
 
 name: R-CMD-check
 
