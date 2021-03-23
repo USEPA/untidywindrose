@@ -8,11 +8,11 @@ on:
   push:
     branches:
       - master
-      - github-actions
+      - github-action
   pull_request:
     branches:
       - master
-      - github-actions
+      - github-action
 
 name: R-CMD-check
 
