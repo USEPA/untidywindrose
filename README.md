@@ -1,6 +1,15 @@
 README
 ================
 
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/badge.svg)](https://github.com/USEPA/untidywindrose/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/untidywindrose)](https://CRAN.R-project.org/package=untidywindrose)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
 # EPA Disclaimer
 
 This software/application was developed by the U.S. Environmental
@@ -15,15 +24,6 @@ or imply their endorsement, recommendation or favoring by the USEPA. The
 USEPA seal and logo shall not be used in any manner to imply endorsement
 of any commercial product or activity by the USEPA or the United States
 Government.
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/bade.svg)](https://github.com/USEPA/untidywindrose/actions)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/untidywindrose)](https://CRAN.R-project.org/package=untidywindrose)
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
 
 # untidywindrose
 
