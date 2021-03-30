@@ -3,12 +3,10 @@
 on:
   push:
     branches:
-      - master
-      - github_action
+      - Main
   pull_request:
     branches:
-      - master
-      - github_action
+      - Main
 
 name: R-CMD-check
 
