@@ -8,6 +8,7 @@ README
 status](https://www.r-pkg.org/badges/version/untidywindrose)](https://CRAN.R-project.org/package=untidywindrose)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![license](https://img.shields.io/badge/license-CC0-lightgrey.svg)](https://choosealicense.com/)
 <!-- badges: end -->
 
 # EPA Disclaimer
