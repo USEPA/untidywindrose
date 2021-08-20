@@ -59,9 +59,9 @@ remotes::install_github(repo = "USEPA/untidywindrose",
                         dependencies = TRUE,
                         upgrade = "always",
                         build = TRUE,
-                        #optional, if you want the manual
+                        #optional, if the manual is desired, requires pandoc
                         build_manual = TRUE,
-                        #optional, if you want the vignette
+                        #optional, if the vignette is desired, requires pandoc
                         build_vignettes = TRUE
                         )
 ```
