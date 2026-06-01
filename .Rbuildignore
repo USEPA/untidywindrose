@@ -12,3 +12,5 @@
 ^\WWW$
 ^LICENSE.md$
 ^.git\$
+^\.positai$
+^\.claude$
