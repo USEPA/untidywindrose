@@ -11,12 +11,6 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 #' @importFrom shiny plotOutput sidebarPanel fluidPage
 #' @importFrom shinyjs useShinyjs hidden
 #' @importFrom openair windRose
-<<<<<<< HEAD
-=======
-#' @importFrom RColorBrewer brewer.pal.info
-#' @importFrom dplyr `%>%`() filter
-#' @impotFrom RColorBreer brewer.pal.info
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 #' @return NA
    ui <- shiny::fluidPage(shiny::titlePanel(title = "untidywindrose",
                                             windowTitle = "untidywindrose"),
@@ -32,27 +26,12 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
                                min = 0),
                   shiny::selectInput(inputId = "header",
                               label = "Does this file contain a header?",
-<<<<<<< HEAD
                               choices = list(F,T)
                               ),
                   shiny::selectInput(inputId = "transpose",
                               label = "Transpose the data?",
                               choices = list(F,T)
                               ),
-=======
-                              choices = list(FALSE,TRUE)
-                              ),
-                  shiny::selectInput(inputId = "transpose",
-                              label = "Transpose the data?",
-                              choices = list(FALSE,TRUE)
-                              ),
-                  #colorblindnessnew
-                  #cbPalette <- brewer.pal.info |> dplyr::filter(colorblind == TRUE) |> row.names(),
-                  selectInput("colorpalette", label ="Select Color Palete",
-                              choices = brewer.pal.info |> dplyr::filter(colorblind == TRUE) |> row.names(),
-                              selected="BuGn"),
-                  
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
                   shiny::radioButtons(inputId = "delim",
                                label = "File delimiter",
                                choices = list("tab (\"/t\")",
@@ -110,10 +89,6 @@ outputextnsions <- list("png", "bmp", "jpeg", "tiff", "eps", "pdf", "ps")
 #' @noRd
 
 server <- function(input, output, session){
-<<<<<<< HEAD
-=======
-              shinyjs::show("colorpalette")
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
               worksheet <- reactiveValues()
               observeEvent(input$submit,{
                 shinyjs::show("windspeed")
@@ -137,11 +112,7 @@ server <- function(input, output, session){
                                                    sep = delim, skip = input$headerrows
                                                    )
                                         )
-<<<<<<< HEAD
                 if (input$transpose == T)
-=======
-                if (input$transpose == TRUE)
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
                   {
                     worksheet$wb <- t(isolate(worksheet$wb))
                   }
@@ -171,12 +142,7 @@ server <- function(input, output, session){
                 output$wr <- renderPlot({openair::windRose(mydata = worksheet$wb,
                                                   ws = isolate(input$windspeed),
                                                   wd = isolate(input$winddirection),
-<<<<<<< HEAD
                                                   annotate = T)
-=======
-                                                  cols = isolate(input$colorpalette),
-                                                  annotate = TRUE)
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
                                         })
                 output$outfile <- downloadHandler(
                   filename = function() {
@@ -209,11 +175,7 @@ server <- function(input, output, session){
                     plot(openair::windRose(mydata = worksheet$wb,
                                   ws = isolate(input$windspeed),
                                   wd = isolate(input$winddirection),
-<<<<<<< HEAD
                                   annotate = T)
-=======
-                                  annotate = TRUE)
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
                          )
                     dev.off()
                     }

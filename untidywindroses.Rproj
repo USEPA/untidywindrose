@@ -1,8 +1,4 @@
 Version: 1.0
-<<<<<<< HEAD
-=======
-ProjectId: 3d7e0ab3-aad6-4c08-b8ee-4d8827f2caa2
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 
 RestoreWorkspace: Default
 SaveWorkspace: Default

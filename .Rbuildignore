@@ -3,10 +3,7 @@
 ^\.Rproj\.user$
 ^packrat/
 ^\.Rprofile$
-<<<<<<< HEAD
 
-=======
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 ^.*\.Rproj$
 ^\.github$
 ^cran-comments\.md$
@@ -15,8 +12,3 @@
 ^\WWW$
 ^LICENSE.md$
 ^.git\$
-<<<<<<< HEAD
-=======
-^\.positai$
-^\.claude$
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)

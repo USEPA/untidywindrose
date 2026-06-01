@@ -1,8 +1,3 @@
 .Rhistory
 .RData
 .Rproj.user
-<<<<<<< HEAD
-=======
-inst/rsconnect/*
-.positai
->>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
