@@ -5,8 +5,13 @@ Title: Create Windrose Plots with an Easy to Use Shiny Interface
 Authors@R: c(person("Clinton", "Mccrowey", role = c("aut", "cre"),
                      email = "mccrowey.clinton@epa.gov"))
 Maintainer: Clinton Mccrowey <mccrowey.clinton@epa.gov>
+<<<<<<< HEAD
 Depends: R (>= 3.6.0)
 Imports: DT, openair, dplyr, shiny, shinyjs
+=======
+Depends: R (>= 4.5.0)
+Imports: DT, openair, dplyr, shiny, shinyjs, RColorBrewer
+>>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 Suggests: knitr, rmarkdown, roxygen2, markdown
 Encoding: UTF-8
 Description: A simple shiny app for the creation of windroses from text based
@@ -17,7 +22,11 @@ License_restricts_use: no
 LazyData: true
 URL: https://github.com/USEPA/untidywindrose
 BugReports: https://github.com/USEPA/untidywindrose/issues
+<<<<<<< HEAD
 RoxygenNote: 7.1.1
+=======
+RoxygenNote: 7.3.2
+>>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 VignetteBuilder: knitr
 ByteCompile: true
 Collate: 'untidywindrose.R'

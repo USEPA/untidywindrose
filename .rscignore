@@ -1,0 +1,14 @@
+inst/rsconnect/*
+^.*\.RData
+^.*\.Rhistory
+^\.Rproj\.user$
+^packrat/
+^\.Rprofile$
+^.*\.Rproj$
+^\.github$
+^cran-comments\.md$
+^README.md$
+^README.Rmd$
+^\WWW$
+^LICENSE.md$
+^.git\$

@@ -81,6 +81,7 @@ package for further instructions
 
 ## Authors
 
+<<<<<<< HEAD
 -   Clinton Mccrowey, Physical Scientist - U.S. Environmental Protection
     Agency
 
@@ -92,6 +93,19 @@ package for further instructions
     Protection Agency
 -   (document review) Cynthia Stahl Ph.D., Environmental Scientist -
     U.S. Environmental Protection Agency
+=======
+- Clinton Mccrowey, Physical Scientist - U.S. Environmental Protection
+  Agency
+
+### Contributors
+
+- (advisor/tester) Howard Schmidt, Environmental Engineer - U.S.
+  Environmental Protection Agency
+- (management) Alice Chow, Associate Director - U.S. Environmental
+  Protection Agency
+- (document review) Cynthia Stahl Ph.D., Environmental Scientist - U.S.
+  Environmental Protection Agency
+>>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 
 ## EPA Disclaimer
 
@@ -106,5 +120,9 @@ endorsement, recommendation or favoring by EPA. The EPA seal and logo
 shall not be used in any manner to imply endorsement of any commercial
 product or activity by EPA or the United States Government.
 
+<<<<<<< HEAD
 \#\#License This project is licensed under the CC0 License - see the
+=======
+\##License This project is licensed under the CC0 License - see the
+>>>>>>> 62dab13 (update DESCRIPTION to require newer R version, generte updated manifest.json)
 [LICENSE.md](LICENSE.md) file for details
