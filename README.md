@@ -3,12 +3,10 @@ README
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/USEPA/untidywindrose/workflows/R-CMD-check/badge.svg)](https://github.com/USEPA/untidywindrose/actions)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/untidywindrose)](https://CRAN.R-project.org/package=untidywindrose)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![license](https://img.shields.io/badge/license-CC0-lightgrey.svg)](https://choosealicense.com/)
+[![R-CMD-check](https://github.com/USEPA/untidywindrose/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/USEPA/untidywindrose/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 # EPA Disclaimer
@@ -81,17 +79,17 @@ package for further instructions
 
 ## Authors
 
--   Clinton Mccrowey, Physical Scientist - U.S. Environmental Protection
-    Agency
+- Clinton Mccrowey, Physical Scientist - U.S. Environmental Protection
+  Agency
 
 ### Contributors
 
--   (advisor/tester) Howard Schmidt, Environmental Engineer - U.S.
-    Environmental Protection Agency
--   (management) Alice Chow, Associate Director - U.S. Environmental
-    Protection Agency
--   (document review) Cynthia Stahl Ph.D., Environmental Scientist -
-    U.S. Environmental Protection Agency
+- (advisor/tester) Howard Schmidt, Environmental Engineer - U.S.
+  Environmental Protection Agency
+- (management) Alice Chow, Associate Director - U.S. Environmental
+  Protection Agency
+- (document review) Cynthia Stahl Ph.D., Environmental Scientist - U.S.
+  Environmental Protection Agency
 
 ## EPA Disclaimer
 
@@ -106,5 +104,5 @@ endorsement, recommendation or favoring by EPA. The EPA seal and logo
 shall not be used in any manner to imply endorsement of any commercial
 product or activity by EPA or the United States Government.
 
-\#\#License This project is licensed under the CC0 License - see the
+\##License This project is licensed under the CC0 License - see the
 [LICENSE.md](LICENSE.md) file for details

@@ -11,8 +11,16 @@ print(getwd())
 
 ## ----echo=FALSE, fig.width=5, fig.align = "center", message=F, warning=F----
 require(openair)
-cbPalette <- c("#999999", "#E69F00", "#56B4E9",  #colorbild safer pallette
-                "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbPalette <- c(
+  "#999999",
+  "#E69F00",
+  "#56B4E9", #colorbild safer pallette
+  "#009E73",
+  "#F0E442",
+  "#0072B2",
+  "#D55E00",
+  "#CC79A7"
+)
 # openair::windRose(sampledata,
 #                   ws = "Windspeed",
 #                   auto.text = T,
@@ -25,4 +33,3 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9",  #colorbild safer pallette
 #                   #breaks = c(0.5, 3, 10, 15),
 #                   #ws.int = 5,
 #                   key.footer = "mi/hr")
-

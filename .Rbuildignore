@@ -16,3 +16,4 @@ app.R
 ^\.claude$
 manifest.json
 rsconnect
+^[.]?air[.]toml$

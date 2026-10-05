@@ -24,4 +24,4 @@ Collate: 'untidywindrose.R'
 Copyright: United States Environmental Protection Agency
 NeedsCompilation: no
 BuildVignettes: true
-Type: Shiny
+Type: Package
